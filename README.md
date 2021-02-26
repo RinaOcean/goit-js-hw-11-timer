@@ -5,7 +5,7 @@
 интернет-магазинах, страницах регистрации событий, во время технического
 обслуживания и т. д.
 
-![preview](preview.gif)
+![preview](https://raw.githubusercontent.com/goitacademy/javascript-homework/master/homework-11/timer/preview.gif)
 
 Плагин ожидает следующую HTML-разметку и показывает четыре цифры: дни, часы,
 минуты и секунды в формате `XX:XX:XX:XX`. Количество дней может состоять из
