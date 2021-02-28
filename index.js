@@ -20,7 +20,7 @@ class CountdownTimer {
       const curentTime = new Date();
       const deltatime = this.targetDate - curentTime;
       const time = this.getTimeComponents(deltatime);
-
+      blink(document.getElementById('blink'), 500);
       this.onTick(time);
     }, 1000);
   }
@@ -38,6 +38,8 @@ class CountdownTimer {
   pad(value) {
     return String(value).padStart(2, '0');
   }
+
+  dotsFlashing() {}
 }
 
 new CountdownTimer({
@@ -51,4 +53,14 @@ function updateTimer({ days, hours, mins, secs }) {
   refs.hours.textContent = hours;
   refs.mins.textContent = mins;
   refs.secs.textContent = secs;
+}
+
+function blink(element, time) {
+  element.style.visibility = 'hidden';
+  setTimeout(function () {
+    element.style.visibility = 'visible';
+  }, time);
+  setTimeout(function () {
+    blink(element, time);
+  }, time * 2);
 }
