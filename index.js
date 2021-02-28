@@ -3,6 +3,7 @@ const refs = {
   hours: document.querySelector('[data-value="hours"]'),
   mins: document.querySelector('[data-value="mins"]'),
   secs: document.querySelector('[data-value="secs"]'),
+  secsDots: document.querySelector('[data-value="dots_secs"]'),
 };
 
 class CountdownTimer {
@@ -10,11 +11,7 @@ class CountdownTimer {
     this.selector = selector;
     this.targetDate = targetDate;
     this.onTick = onTick;
-    // this.timerRef = timerRef;
-    // this.days = this.timerRef.querySelector('[data-value="days"]');
-    // this.hours = this.timerRef.querySelector('[data-value="hours"]');
-    // this.mins = this.timerRef.querySelector('[data-value="mins"]');
-    // this.secs = this.timerRef.querySelector('[data-value="secs"]');
+
     this.countDown();
   }
 
@@ -47,7 +44,6 @@ new CountdownTimer({
   selector: '#timer-1',
   targetDate: new Date(2022, 0, 1, 0, 0, 0),
   onTick: updateTimer,
-  // timerRef: document.getElementById(this.selector),
 });
 
 function updateTimer({ days, hours, mins, secs }) {

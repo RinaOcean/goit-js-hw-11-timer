@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -13,9 +19,17 @@
         <span class="label">Days</span>
       </div>
 
+      <div class="dots">
+        <span data-value="dots">:</span>
+      </div>
+
       <div class="field">
         <span class="value" data-value="hours">0</span>
         <span class="label">Hours</span>
+      </div>
+
+      <div class="dots">
+        <span data-value="dots">:</span>
       </div>
 
       <div class="field">
@@ -23,8 +37,12 @@
         <span class="label">Minutes</span>
       </div>
 
+      <div class="dots">
+        <span data-value="dots_secs">:</span>
+      </div>
+
       <div class="field">
-        <span class="value" data-value="secs">0</span>
+        <span class="value" hidden="true" data-value="secs">0</span>
         <span class="label">Seconds</span>
       </div>
     </div>
